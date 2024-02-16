@@ -6,7 +6,7 @@ name: build storage account bicep
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ master ]
+    branches: [ test ]
   pull_request:
     branches: [ none ]
 
@@ -58,7 +58,8 @@ jobs:
       - name: 'What-if'
         working-directory: '${{github.workspace}}/actions/bicep'
         run: |
-          az deployment group create --what-if --resource-group demo-rg --template-file './storage.bicep' --parameters storage_account_name=mystorageaccount15041995 location=westeurope
+          az deployment sub create --what-if --location westeurope --template-file './storage.bicep' --parameters storage_account_name=mystorageaccount15041995
+
   dev_deployment:
     name: dev deployment 
     # The type of runner that the job will run on
