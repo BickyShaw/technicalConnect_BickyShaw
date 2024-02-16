@@ -103,4 +103,4 @@ jobs:
       - name: 'deploy storage account bicep'
         working-directory: '${{github.workspace}}/actions/bicep'
         run: |
-          az deployment group create --resource-group "$resourceGroupName" --template-file './storage.bicep' --parameters storage_account_name=mystorageaccount15041995 location=westeurope
+          az deployment group create --resource-group "$resourceGroupName" --template-file './storage.bicep' --parameters storage_account_name=mystorageaccount1504199507 location=westeurope
