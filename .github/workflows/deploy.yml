@@ -39,7 +39,7 @@ jobs:
       - name: 'What-if'
         working-directory: '${{github.workspace}}/actions/bicep'
         run: |
-          az deployment group create --what-if --resource-group demo-rg --template-file './storage.bicep' --parameters @actions/bicep/parameters.json
+          az deployment group create --what-if --resource-group demo-rg --template-file './storage.bicep' --parameters param1=mystorageaccount15041995 param2= west euorape
   dev_deployment:
     name: dev deployment 
     # The type of runner that the job will run on
@@ -60,5 +60,5 @@ jobs:
       - name: 'deploy storage account bicep'
         working-directory: '${{github.workspace}}/actions/bicep'
         run: |
-          az deployment group create --resource-group demo-rg --template-file './storage.bicep' --parameters @actions/bicep/parameters.json
+          az deployment group create --resource-group demo-rg --template-file './storage.bicep' --parameters param1=mystorageaccount15041995 param2= west euorape
   
