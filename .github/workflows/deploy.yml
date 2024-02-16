@@ -14,13 +14,11 @@ on:
   workflow_dispatch:
 
 
-
-
 jobs:
   top_secret:
   runs-on: ubuntu-latest
   env:
-  MY_APP_ID: ${{vars.APP_ID}}
+    MY_APP_ID: ${{vars.APP_ID}}
 
   steps:
     - name: Read a variable
