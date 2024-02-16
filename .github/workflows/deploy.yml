@@ -18,7 +18,7 @@ on:
 
 jobs:
   top_secret:
-  runs_on: ubuntu-latest
+  runs-on: ubuntu-latest
   env:
   MY_APP_ID: ${{vars.APP_ID}}
 
